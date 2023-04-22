@@ -4,7 +4,7 @@ const { networkInterfaces } = require('os');
 const port = 3000;
 const requestHandler = (request, response) => {
 	const IPs = getIPs();
-	response.end(JSON.stringify(IPs));
+	response.end(JSON.stringify(IPs)+'\n');
 }
 const server = http.createServer(requestHandler)
 server.listen(port, (err) => {
